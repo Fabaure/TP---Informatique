@@ -3,7 +3,7 @@
 #include<opencv2/imgproc/imgproc.hpp>
 using namespace cv;
 using namespace std;
-int main() {
+int Circle() {
 	Mat whiteMatrix(20000, 20000, CV_8UC3, Scalar(255, 255, 255));//Declaring a white matrix//
 	Point center(500, 500);//Starting Point of the line
 	int radius = 300;//Ending Point of the line
@@ -15,4 +15,8 @@ int main() {
 	waitKey(0);//Waiting for KeyStroke
 	return 0;
 
+}
+
+int main() {
+	std::cout << Circle();
 }
