@@ -31,5 +31,5 @@ int rectangle() {
 }
 
 int main() {
-	cout << circle() << rectangle();
+	cout << Circle() << rectangle();
 }
