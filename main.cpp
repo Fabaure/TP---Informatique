@@ -1,6 +1,8 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
 #include "Dessins.h"
+#include "Rectangle.h"
+#include "Circle.h"
 
 using namespace cv;
 
@@ -27,5 +29,8 @@ int main() {
     delete triangle;
     delete ligne;
 
+	cout << Circle() << Rectangle();
+
     return 0;
 }
+
