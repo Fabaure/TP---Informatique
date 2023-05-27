@@ -1,4 +1,6 @@
 #pragma once
+#ifndef FORME_H
+#define FORME_H
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
@@ -8,3 +10,5 @@ class Forme {
 public:
     virtual void dessiner(Mat& image) = 0;
 };
+
+#endif

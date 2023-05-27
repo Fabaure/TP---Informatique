@@ -5,12 +5,13 @@
 #include "Circle.h"
 
 using namespace cv;
+using namespace std;
 
 int main() {
     int width = 800;
     int height = 600;
 
-    Dessin dessin(width, height);
+    Dessins dessin(width, height);
 
     // Création d'un triangle
     Triangle* triangle = new Triangle();
@@ -28,8 +29,9 @@ int main() {
 
     delete triangle;
     delete ligne;
-
-	cout << Circle() << Rectangle();
+    
+    Rectangle();
+    Cercle();
 
     return 0;
 }
