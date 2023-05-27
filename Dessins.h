@@ -1,32 +1,34 @@
 #pragma once
+#ifndef DESSINS_H
+#define DESSINS_H
+#include <vector>
+#include <string>
+#include <opencv2/opencv.hpp>
+#include "Forme.h"
 #include "Triangle.h"
 #include "LigneDroite.h"
-#include "Forme.h"
-#include <opencv2/opencv.hpp>
-class Dessin {
+
+
+using namespace cv;
+using namespace std;
+
+class Dessins {
 private:
-    std::vector<Forme*> formes;
+    vector<Forme*> formes;
     Mat image;
 
 public:
-    Dessin(int width, int height) {
-        image = Mat(height, width, CV_8UC3, Scalar(255, 255, 255)); // Création de l'image blanche
-    }
+    Dessins(int width, int height);
 
-    void ajouterForme(Forme* forme) {
-        formes.push_back(forme);
-    }
+    void ajouterForme(Forme* forme);
+    void supprimerForme(int index);
+    void dessinerFormes();
+    void afficher();
+    void sauvegarderDessin(const string& fichier);
+    void lireDessin(const string& fichier);
 
-    void dessinerFormes() {
-        for (Forme* forme : formes) {
-            forme->dessiner(image);
-        }
-    }
-
-    void afficher() {
-        namedWindow("Dessin", WINDOW_AUTOSIZE);
-        imshow("Dessin", image);
-        waitKey(0);
-        destroyWindow("Dessin");
-    }
+    ~Dessins(); // Ajout du destructeur
 };
+
+
+#endif 

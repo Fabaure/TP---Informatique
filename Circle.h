@@ -6,16 +6,16 @@
 using namespace cv;
 using namespace std;
 
-int Circle() {
-	Mat whiteMatrix(20000, 20000, CV_8UC3, Scalar(255, 255, 255));//Declaring a white matrix//
-	Point center(500, 500);//Starting Point of the line
-	int radius = 300;//Ending Point of the line
-	Scalar line_Color(0, 0, 0);//Color of the line
-	int thickness = 2;//thickens of the line
-	namedWindow("GrayImage");//Declaring a window to show the line
-	circle(whiteMatrix, center, radius, line_Color, thickness);//using line() function to draw the line//
-	imshow("GrayImage", whiteMatrix);//showing the line//
-	waitKey(0);//Waiting for KeyStroke
+int Cercle() {
+	Mat matriceBlanche(20000, 20000, CV_8UC3, Scalar(255, 255, 255));// Déclaration d'une matrice blanche //
+	Point centre(500, 500);// Point de départ du cercle (x,y)
+	int rayon = 30;// Rayon du cercle
+	Scalar couleurCercle(255, 0, 0);// Couleur du cercle ( ici en rouge (RGB) )
+	int épaisseur = 2;// Épaisseur du cercle
+	namedWindow("ImageGrise");// Déclaration d'une fenêtre pour afficher le cercle
+	circle(matriceBlanche, centre, rayon, couleurCercle, épaisseur); // Utilisation de la fonction circle() pour dessiner le cercle
+	imshow("ImageGrise", matriceBlanche);// Affichage du cercle
+	waitKey(0);// Attente d'une pression de touche
 	return 0;
 
 }
