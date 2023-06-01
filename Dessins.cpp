@@ -25,10 +25,10 @@ void Dessins::dessinerFormes() {
 }
 
 void Dessins::afficher() {
-    namedWindow("Dessin", cv::WINDOW_AUTOSIZE);
-    imshow("Dessin", image);
+    namedWindow("Tableau", cv::WINDOW_AUTOSIZE);
+    imshow("Tableau", image);
     waitKey(0);
-    destroyWindow("Dessin");
+    destroyWindow("Tableau");
 }
 
 void Dessins::sauvegarderDessin(const std::string& fichier) {

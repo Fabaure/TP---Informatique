@@ -121,18 +121,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Dessins.cpp" />
-    <ClCompile Include="LigneDroite.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Triangle.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Dessins.h" />
     <ClInclude Include="Forme.h" />
     <ClInclude Include="LigneDroite.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Triangle.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="Dessins.cpp" />
+    <ClCompile Include="Forme.cpp" />
+    <ClCompile Include="LigneDroite.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="Triangle.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

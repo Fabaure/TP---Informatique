@@ -21,17 +21,17 @@ int main() {
     LigneDroite* ligne = new LigneDroite();
     dessin.ajouterForme(ligne);
 
+    Circle* cercle = new Circle();
+    dessin.ajouterForme(cercle);
+
+    Rectangle* rectangle = new Rectangle();
+    dessin.ajouterForme(rectangle);
+
     // Dessiner les formes
     dessin.dessinerFormes();
 
     // Afficher le dessin
     dessin.afficher();
-
-    delete triangle;
-    delete ligne;
-    
-    Rectangle();
-    Cercle();
 
     return 0;
 }
