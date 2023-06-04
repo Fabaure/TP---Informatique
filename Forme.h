@@ -8,6 +8,7 @@ using namespace cv;
 
 class Forme {
 public:
+
     virtual void dessiner(Mat& image) = 0;
 };
 

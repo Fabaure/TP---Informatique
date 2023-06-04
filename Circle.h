@@ -9,6 +9,18 @@ using namespace std;
 
 
 class Circle : public Forme {
+private:
+	Point CentreCercle;
+	int RayonCercle;
+	Scalar CouleurCercle;
+	int EpaisseurCercle;
+
 public:
+	Circle();
+	Circle(Point CentreCercle_, int RayonCercle_, Scalar CouleurCercle_, int EpaisseurCercle_);
+	Point GetCentreCercle();
+	int GetRayonCercle();
+	Scalar GetCouleurCercle();
+	int GetEpaisseurCercle();
 	void dessiner(Mat& image) override;
 };

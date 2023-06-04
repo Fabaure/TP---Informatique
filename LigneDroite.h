@@ -7,7 +7,22 @@
 using namespace cv;
 
 class LigneDroite : public Forme {
+private:
+    Point PointdebutTrait;
+    Point PointfinTrait;
+    Scalar CouleurTrait;
+    int Largeurtrait;
+
+
 public:
+    LigneDroite();
+    LigneDroite(Point PointdebutTrait_, Point PointfinTrait_, Scalar CouleurTrait_, int LargeurTrait_);
+    Point GetPointdebutTrait();
+    Point GetPointfinTrait();
+    Scalar GetCouleurTrait();
+    int GetLargeurTrait();
+
+
     void dessiner(Mat& image) override;
 };
 

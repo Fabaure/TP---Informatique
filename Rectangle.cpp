@@ -1,10 +1,42 @@
 #include "Rectangle.h"
 
+Rectangle::Rectangle()
+{
+	PointdebutRectangle = Point(NULL, NULL);
+	PointfinRectangle = Point(NULL, NULL);
+	CouleurRectangle = Scalar(NULL, NULL, NULL);
+	epaisseurRectangle = NULL;
+}
+
+Rectangle::Rectangle(Point PointdebutRectangle_, Point PointfinRectangle_, Scalar CouleurRectangle_, int epaisseurRectangle_)
+{
+	PointdebutRectangle = PointdebutRectangle_;
+	PointfinRectangle = PointfinRectangle_;
+	CouleurRectangle = CouleurRectangle_;
+	epaisseurRectangle = epaisseurRectangle_;
+}
+
 void Rectangle::dessiner(Mat& image)
 {
-	Point pointDepart(40, 40);
-	Point pointArrivee(160, 100);
-	Scalar couleurRectangle(0, 0, 255);
-	int épaisseur = 2;
-	rectangle(image, pointDepart, pointArrivee, couleurRectangle, épaisseur);
+	rectangle(image, PointdebutRectangle, PointfinRectangle, CouleurRectangle, epaisseurRectangle);
+}
+
+Point Rectangle::GetPointdebutRectangle()
+{
+	return PointdebutRectangle;
+}
+
+Point Rectangle::GetPointfinRcetangle()
+{
+	return PointfinRectangle;
+}
+
+Scalar Rectangle::GetCouleurRectangle()
+{
+	return CouleurRectangle;
+}
+
+int Rectangle::GetEpaisseurRectangle()
+{
+	return epaisseurRectangle;
 }

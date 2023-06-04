@@ -126,6 +126,7 @@
     <ClInclude Include="Forme.h" />
     <ClInclude Include="LigneDroite.h" />
     <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="RectangleAnimation.h" />
     <ClInclude Include="Triangle.h" />
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +136,7 @@
     <ClCompile Include="LigneDroite.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="RectangleAnimation.cpp" />
     <ClCompile Include="Triangle.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

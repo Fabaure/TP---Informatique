@@ -18,7 +18,7 @@ private:
     Mat image;
 
 public:
-    Dessins(int width, int height);
+    Dessins(int width, int height, Scalar CouleurMatrice);
 
     void ajouterForme(Forme* forme);
     void supprimerForme(int index);

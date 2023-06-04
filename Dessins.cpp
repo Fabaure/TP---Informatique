@@ -3,8 +3,8 @@
 
 using namespace cv;
 
-Dessins::Dessins(int width, int height) {
-    image = Mat(height, width, CV_8UC3, Scalar(255, 255, 255));
+Dessins::Dessins(int width, int height, Scalar CouleurMatrice) {
+    image = Mat(height, width, CV_8UC3, CouleurMatrice);
 }
 
 void Dessins::ajouterForme(Forme* forme) {
@@ -28,7 +28,7 @@ void Dessins::afficher() {
     namedWindow("Tableau", cv::WINDOW_AUTOSIZE);
     imshow("Tableau", image);
     waitKey(0);
-    destroyWindow("Tableau");
+        destroyWindow("Tableau");
 }
 
 void Dessins::sauvegarderDessin(const std::string& fichier) {
