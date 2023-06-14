@@ -1,4 +1,5 @@
 #include "RectangleAnimation.h"
+#include "Dessins.h"
 
 
 RectangleAnimation::RectangleAnimation()
@@ -23,32 +24,7 @@ RectangleAnimation::RectangleAnimation(Point PointdebutRectangleAnime_, Point Po
 
 void RectangleAnimation::dessiner(Mat& image)
 {
-        //Point PointfinXRectangle = PointdebutRectangleAnime + Point(DecalageXRectangleAnime, 0);
-        //Point PointfinYRectangle = PointfinRectangleAnime + Point(0, DecalageYRectangleAnime);
-        rectangle(image, PointdebutRectangleAnime, PointfinRectangleAnime, CouleurRectangleAnime, EpaisseurRectangleAnime);
-        //int key = cv::waitKey();
-        //if (key == 3) {
-            //for (int compteurX = 0; compteurX < DecalageXRectangleAnime; compteurX++) {
-
-               // if (PointfinRectangleAnime != PointfinXRectangle) {
-                 //   PointdebutRectangleAnime = PointdebutRectangleAnime + Point(5, 0);
-             //       PointfinRectangleAnime = PointfinRectangleAnime + Point(5, 0);
-           //         rectangle(image, PointdebutRectangleAnime, PointfinRectangleAnime, CouleurRectangleAnime, EpaisseurRectangleAnime);
-
-         //       }
-
-        //    }
-        //}
-        //while (pass != 2) {
-           // if (PointfinRectangleAnime != PointfinYRectangle) {
-             //   PointdebutRectangleAnime = PointdebutRectangleAnime + Point(0, 1);
-             //   PointfinRectangleAnime = PointfinRectangleAnime + Point(0, 1);
-             //   rectangle(image, PointdebutRectangleAnime, PointfinRectangleAnime, CouleurRectangleAnime, EpaisseurRectangleAnime);
-           // }
-           // else {
-              //  pass++;
-           // }
-      //  }
+        rectangle(image, PointdebutRectangleAnime, PointfinRectangleAnime, CouleurRectangleAnime, EpaisseurRectangleAnime);  
 }
 
 Point RectangleAnimation::GetPointdebutRectangleAnime()
@@ -81,8 +57,15 @@ int RectangleAnimation::GetDecalageYRectangleAnime()
     return DecalageYRectangleAnime;
 }
 
-void RectangleAnimation::move()
+void RectangleAnimation::AnimationRectangleAnime()
 {
-    PointdebutRectangleAnime += Point (DecalageXRectangleAnime,0) ;
-    PointfinRectangleAnime += Point(0,DecalageYRectangleAnime);
+    PointdebutRectangleAnime += Point(DecalageXRectangleAnime,DecalageYRectangleAnime);
+    PointfinRectangleAnime += Point(DecalageXRectangleAnime, DecalageYRectangleAnime);
+    if (PointdebutRectangleAnime.x <= 0 || PointfinRectangleAnime.x >= 1520)
+        DecalageXRectangleAnime = -DecalageXRectangleAnime;
+    if (PointdebutRectangleAnime.y <= 0 || PointfinRectangleAnime.y >= 800)
+        DecalageYRectangleAnime = -DecalageYRectangleAnime;
+
 }
+
+

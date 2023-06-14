@@ -21,6 +21,6 @@ public:
     int GetEpaisseurRectangleAnime();
     int GetDecalageXRectangleAnime();
     int GetDecalageYRectangleAnime();
-    void move();
+    void AnimationRectangleAnime();
 };
 

@@ -122,22 +122,28 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Circle.h" />
+    <ClInclude Include="CircleAnimation.h" />
     <ClInclude Include="Dessins.h" />
     <ClInclude Include="Forme.h" />
     <ClInclude Include="LigneDroite.h" />
+    <ClInclude Include="LigneDroiteAnimation.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="RectangleAnimation.h" />
     <ClInclude Include="Triangle.h" />
+    <ClInclude Include="TriangleAnimation.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="CircleAnimation.cpp" />
     <ClCompile Include="Dessins.cpp" />
     <ClCompile Include="Forme.cpp" />
     <ClCompile Include="LigneDroite.cpp" />
+    <ClCompile Include="LigneDroiteAnimation.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="RectangleAnimation.cpp" />
     <ClCompile Include="Triangle.cpp" />
+    <ClCompile Include="TriangleAnimation.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
