@@ -8,7 +8,10 @@ using namespace cv;
 
 class Forme {
 public:
+
     virtual void dessiner(Mat& image) = 0;
+    virtual bool estpointinterieur(int x, int y) const = 0;
+    virtual ~Forme() {}
 };
 
 #endif
