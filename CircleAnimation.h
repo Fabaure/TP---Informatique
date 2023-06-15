@@ -1,5 +1,6 @@
 #pragma once
 #include "Forme.h"
+#include "Circle.h"
 
 class CircleAnimation : public Forme
 {
@@ -21,5 +22,7 @@ public:
 	int GetDecalageXCercleAnime();
 	int GetDecalageYCercleAnime();
 	void AnimationCercleAnime();
+	bool estpointinterieur(int x, int y) const override;
+	bool estCercleAnime(int x, int y) const;
 };
 

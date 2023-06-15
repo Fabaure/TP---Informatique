@@ -22,5 +22,5 @@ public:
     Point GetPointfinRcetangle();
     Scalar GetCouleurRectangle();
     int GetEpaisseurRectangle();
-
+    bool estpointinterieur(int x, int y) const override;
 };

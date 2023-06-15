@@ -21,9 +21,8 @@ public:
     Point GetPointfinTrait();
     Scalar GetCouleurTrait();
     int GetLargeurTrait();
-
-
     void dessiner(Mat& image) override;
+    bool estpointinterieur(int x, int y) const override;
 };
 
 #endif

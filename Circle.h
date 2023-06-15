@@ -23,4 +23,5 @@ public:
 	Scalar GetCouleurCercle();
 	int GetEpaisseurCercle();
 	void dessiner(Mat& image) override;
+	bool estpointinterieur(int x, int y) const override;
 };

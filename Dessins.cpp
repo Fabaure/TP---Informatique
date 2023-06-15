@@ -24,14 +24,6 @@ void Dessins::ajouterForme(Forme* forme) {
     formes.push_back(forme);
 }
 
-void Dessins::supprimerForme(Forme* forme) {
-    auto it = find(formes.begin(), formes.end(), forme);
-    if (it != formes.end()) {
-        formes.erase(it);
-    }
-}
-
-
 
 void Dessins::dessinerFormes() {
     for (Forme* forme : formes) {
@@ -53,6 +45,7 @@ void Dessins::afficher() {
 
 void Dessins::CallBackFunc(int event, int x, int y, int flags, void* userdata)
 {
+    Dessins* Matrice = static_cast<Dessins*>(userdata);
     if (event == EVENT_LBUTTONDOWN)
     {
         // Obtention de l'objet Matrice à partir de userdata
@@ -63,6 +56,24 @@ void Dessins::CallBackFunc(int event, int x, int y, int flags, void* userdata)
 
         // Ajout de l'objet Circle à la Matrice
         Matrice->ajouterForme(ObjetPredetermine);
+    }
+    else if (event == EVENT_RBUTTONDOWN)
+    {
+        auto it = Matrice->formes.begin();
+        while (it != Matrice->formes.end())
+        {
+            Forme* forme = *it;
+            if (forme->estpointinterieur(x, y))
+            {
+                // Suppression de la forme si le bouton droit de la souris est enfoncé et le clic est effectué à l'intérieur de la forme
+                delete forme;
+                it = Matrice->formes.erase(it);
+            }
+            else
+            {
+                ++it;
+            }
+        }
     }
 }
 

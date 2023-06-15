@@ -40,3 +40,8 @@ int Rectangle::GetEpaisseurRectangle()
 {
 	return epaisseurRectangle;
 }
+
+bool Rectangle::estpointinterieur(int x, int y) const {
+	// Vérification si le point est à l'intérieur du rectangle
+	return x >= PointdebutRectangle.x && x <= PointfinRectangle.x && y >= PointdebutRectangle.y && y <= PointfinRectangle.y;
+}

@@ -23,6 +23,7 @@ public:
     Scalar GetCouleurTriangle();
     int GetEpaisseurTriangle();
     void dessiner(Mat& image) override;
+    bool estpointinterieur(int x, int y) const override;
 };
 
 #endif

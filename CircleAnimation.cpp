@@ -59,3 +59,16 @@ void CircleAnimation::AnimationCercleAnime()
 		DecalageYCercleAnimation = -DecalageYCercleAnimation;
 }
 
+bool CircleAnimation::estpointinterieur(int x, int y) const
+{
+	// Utilise la fonction estPointInterieur de la classe Circle
+	double distance = sqrt(pow(x - CentreCercleAnimation.x, 2) + pow(y - CentreCercleAnimation.y, 2));
+	return distance <= RayonCercleAnimation;
+}
+
+bool CircleAnimation::estCercleAnime(int x, int y) const
+{
+	// Vérifie si les coordonnées (x, y) sont à l'intérieur du cercle animé
+	double distance = std::sqrt(std::pow(x - CentreCercleAnimation.x, 2) + std::pow(y - CentreCercleAnimation.y, 2));
+	return distance <= RayonCercleAnimation;
+}

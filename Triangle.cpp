@@ -49,3 +49,18 @@ int Triangle::GetEpaisseurTriangle()
 {
     return EpaisseurTriangle;
 }
+
+bool Triangle::estpointinterieur(int x, int y) const {
+    Point p(x, y);
+
+    // Vérification si le point est à l'intérieur du triangle en utilisant les coordonnées barycentriques
+    double alpha = ((PointsTriangle[1].y - PointsTriangle[2].y) * (p.x - PointsTriangle[2].x) + (PointsTriangle[2].x - PointsTriangle[1].x) * (p.y - PointsTriangle[2].y)) /
+        ((PointsTriangle[1].y - PointsTriangle[2].y) * (PointsTriangle[0].x - PointsTriangle[2].x) + (PointsTriangle[2].x - PointsTriangle[1].x) * (PointsTriangle[0].y - PointsTriangle[2].y));
+
+    double beta = ((PointsTriangle[2].y - PointsTriangle[0].y) * (p.x - PointsTriangle[2].x) + (PointsTriangle[0].x - PointsTriangle[2].x) * (p.y - PointsTriangle[2].y)) /
+        ((PointsTriangle[1].y - PointsTriangle[2].y) * (PointsTriangle[0].x - PointsTriangle[2].x) + (PointsTriangle[2].x - PointsTriangle[1].x) * (PointsTriangle[0].y - PointsTriangle[2].y));
+
+    double gamma = 1.0 - alpha - beta;
+
+    return alpha > 0 && beta > 0 && gamma > 0;
+}

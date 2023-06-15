@@ -35,6 +35,13 @@ int Circle::GetEpaisseurCercle()
 {
 	return EpaisseurCercle;
 }
+bool Circle::estpointinterieur(int x, int y) const {
+	// Calcul de la distance entre le point (x, y) et le centre du cercle
+	double distance = std::sqrt(std::pow(x - CentreCercle.x, 2) + std::pow(y - CentreCercle.y, 2));
+
+	// Vérification si la distance est inférieure ou égale au rayon du cercle
+	return distance <= RayonCercle;
+}
 
 void Circle::dessiner(Mat& image)
 {
