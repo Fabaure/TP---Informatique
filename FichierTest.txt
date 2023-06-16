@@ -1,0 +1,28 @@
+Triangle(Point1: (400, 48), Point2: (50, 64), Point3: (126, 851), Couleur : (255,0,0), Epaisseur : 4)
+
+Ligne droite(Point de début: (500, 86), Point de fin: (69, 187), Couleur : (0,0,255), Epaisseur : 4)
+
+Cercle(Centre: (500, 500), Rayon: 56, Couleur : (60,60,60), Epaisseur : 9)
+
+Rectangle(Point de début: (40, 420), Point de fin: (87, 430), Couleur : (0,255,45), Epaisseur : 2)
+
+Rectangle animé(Point de début: (50, 50), Point de fin: (400, 400), Couleur : (75,75,75), Epaisseur : -1)
+se deplaçant a une vitesse de : 10pixels sur l'axe X, et 0pixels sur l'axe Y.
+
+Cercle animé(Centre: (150, 150), Rayon: 20, Couleur : (255,0,255), Epaisseur : 3)
+se deplaçant a une vitesse de : 5pixels sur l'axe X, et 20pixels sur l'axe Y.
+
+Ligne droite animée(Point de début: (200, 450), Point de fin: (105, 560), Couleur : (124,48,200), Epaisseur : 2)
+se deplaçant a une vitesse de : 4pixels sur l'axe X, et 7pixels sur l'axe Y.
+
+Triangle animé(Point1: (40, 40), Point2: (40, 90), Point3: (75, 65), Couleur : (0,0,0), Epaisseur : 3)
+se deplaçant a une vitesse de : 10pixels sur l'axe X, et 10pixels sur l'axe Y.
+
+Cercle(Centre: (682, 508), Rayon: 25, Couleur : (255,255,0), Epaisseur : -1)
+
+Cercle(Centre: (760, 523), Rayon: 25, Couleur : (255,255,0), Epaisseur : -1)
+
+Cercle(Centre: (878, 529), Rayon: 25, Couleur : (255,255,0), Epaisseur : -1)
+
+Cercle(Centre: (994, 519), Rayon: 25, Couleur : (255,255,0), Epaisseur : -1)
+

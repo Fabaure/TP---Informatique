@@ -26,7 +26,7 @@ Point Rectangle::GetPointdebutRectangle()
 	return PointdebutRectangle;
 }
 
-Point Rectangle::GetPointfinRcetangle()
+Point Rectangle::GetPointfinRectangle()
 {
 	return PointfinRectangle;
 }

@@ -19,7 +19,7 @@ public:
     Rectangle(Point PointdebutRectangle_, Point PointfinRectangle_, Scalar CouleurRectangle_, int epaisseurRectangle_);
     void dessiner(Mat& image) override;
     Point GetPointdebutRectangle();
-    Point GetPointfinRcetangle();
+    Point GetPointfinRectangle();
     Scalar GetCouleurRectangle();
     int GetEpaisseurRectangle();
     bool estpointinterieur(int x, int y) const override;

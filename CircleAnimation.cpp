@@ -30,6 +30,11 @@ Point CircleAnimation::GetCentreCercleAnime()
 	return CentreCercleAnimation;
 }
 
+int CircleAnimation::GetRayonCercleAnime()
+{
+	return RayonCercleAnimation;
+}
+
 Scalar CircleAnimation::GetCouleurCercleAnime()
 {
 	return CouleurCercleAnimation;

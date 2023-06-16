@@ -17,6 +17,7 @@ public:
 	CircleAnimation(Point CentreCercleAnimation_, int RayonCercleAnimation_, Scalar CouleurCercleAnimation_, int EpaisseurCercleAnimation_, int DecalageXCercleAnimation_, int DecalageYCercleAnimation_);
 	void dessiner(Mat& image) override;
 	Point GetCentreCercleAnime();
+	int GetRayonCercleAnime();
 	Scalar GetCouleurCercleAnime();
 	int GetEpaisseurCercleAnime();
 	int GetDecalageXCercleAnime();
