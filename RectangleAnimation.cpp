@@ -32,7 +32,7 @@ Point RectangleAnimation::GetPointdebutRectangleAnime()
     return PointdebutRectangleAnime;
 }
 
-Point RectangleAnimation::GetPointfinRcetangleAnime()
+Point RectangleAnimation::GetPointfinRectangleAnime()
 {
     return PointfinRectangleAnime;
 }

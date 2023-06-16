@@ -46,6 +46,16 @@ int TriangleAnimation::GetEpaisseurTriangleAnimation()
 	return EpaisseurTriangleAnimation;
 }
 
+int TriangleAnimation::GetDecalageXTriangleAnimation()
+{
+	return DecalageXTriangleAnimation;
+}
+
+int TriangleAnimation::GetDecalageYTriangleAnimation()
+{
+	return DecalageYTriangleAnimation;
+}
+
 void TriangleAnimation::dessiner(Mat& image)
 {
 	const cv::Point* contours[1] = { PointsTriangleAnimation };

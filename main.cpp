@@ -13,8 +13,9 @@ using namespace std;
 
 int main() {
 
-    Dessins Matrice(1520, 800, Scalar(160,150,74));
+    Dessins Matrice(1520, 800, Scalar(160,150,74), "FichierTest.txt");
 
+    Matrice.CreationFichier();
     // Création d'un triangle
     Triangle triangle1(Point(400, 48), Point(50, 64), Point(126, 851), Scalar(255, 0, 0), 4);
     Matrice.ajouterForme(&triangle1);
@@ -35,11 +36,13 @@ int main() {
     CircleAnimation CercleAnime1(Point(150, 150), 20, Scalar(255, 0, 255), 3, 5,20);
     Matrice.ajouterForme(&CercleAnime1);
 
+    LigneDroiteAnimation LigneAnime1(Point(200, 450), Point(105, 560), Scalar(124, 48, 200), 2, 4, 7);
+    Matrice.ajouterForme(&LigneAnime1);
+
     TriangleAnimation TriangleAnime1(Point(40, 40), Point(40, 90), Point(75, 65), Scalar(0, 255, 255), 3, 10,10);
     Matrice.ajouterForme(&TriangleAnime1);
 
-    LigneDroiteAnimation LigneAnime1(Point(200, 450), Point(105, 560), Scalar(124, 48, 200), 2, 4,7);
-    Matrice.ajouterForme(&LigneAnime1);
+
     
     while (true) {
 
@@ -61,7 +64,6 @@ int main() {
         if (waitKey(30) == 27)
             break;
     }
-
 
     destroyAllWindows();
     return 0;

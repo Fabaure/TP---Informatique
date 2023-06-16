@@ -7,7 +7,7 @@ LigneDroite::LigneDroite()
     PointdebutTrait = Point(NULL, NULL);
     PointfinTrait = Point(NULL, NULL);
     CouleurTrait = Scalar(NULL, NULL, NULL);
-    Largeurtrait = NULL;
+    Epaisseurtrait = NULL;
 
 }
 
@@ -16,7 +16,7 @@ LigneDroite::LigneDroite(Point PointdebutTrait_, Point PointfinTrait_, Scalar Co
     PointdebutTrait = PointdebutTrait_;
     PointfinTrait = PointfinTrait_;
     CouleurTrait = CouleurTrait_;
-    Largeurtrait = LargeurTrait_;
+    Epaisseurtrait = LargeurTrait_;
 }
 
 Point LigneDroite::GetPointdebutTrait()
@@ -34,11 +34,11 @@ Scalar LigneDroite::GetCouleurTrait()
     return CouleurTrait;
 }
 
-int LigneDroite::GetLargeurTrait()
+int LigneDroite::GetEpaisseurTrait()
 {
-    return Largeurtrait;
+    return Epaisseurtrait;
 }
 
 void LigneDroite::dessiner(Mat& image) {
-    line(image, PointdebutTrait, PointfinTrait, CouleurTrait, Largeurtrait);
+    line(image, PointdebutTrait, PointfinTrait, CouleurTrait, Epaisseurtrait);
 }

@@ -17,6 +17,8 @@ public:
     Point GetPointTriangleAnimation3();
     Scalar GetCouleurTriangleAnimation();
     int GetEpaisseurTriangleAnimation();
+    int GetDecalageXTriangleAnimation();
+    int GetDecalageYTriangleAnimation();
     void dessiner(Mat& image) override;
     void AnimationTriangleAnime();
 };

@@ -11,7 +11,7 @@ private:
     Point PointdebutTrait;
     Point PointfinTrait;
     Scalar CouleurTrait;
-    int Largeurtrait;
+    int Epaisseurtrait;
 
 
 public:
@@ -20,7 +20,7 @@ public:
     Point GetPointdebutTrait();
     Point GetPointfinTrait();
     Scalar GetCouleurTrait();
-    int GetLargeurTrait();
+    int GetEpaisseurTrait();
 
 
     void dessiner(Mat& image) override;

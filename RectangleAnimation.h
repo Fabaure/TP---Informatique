@@ -16,7 +16,7 @@ public:
     RectangleAnimation(Point PointdebutRectangleAnime_, Point PointfinRectangleAnime_, Scalar CouleurRectangleAnime_, int epaisseurRectangleAnime_, int DecalageXRectangleAnime_, int DecalageYRectangleAnime_);
     void dessiner(Mat& image) override;
     Point GetPointdebutRectangleAnime();
-    Point GetPointfinRcetangleAnime();
+    Point GetPointfinRectangleAnime();
     Scalar GetCouleurRectangleAnime();
     int GetEpaisseurRectangleAnime();
     int GetDecalageXRectangleAnime();
