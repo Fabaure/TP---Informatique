@@ -68,3 +68,9 @@ void RectangleAnimation::AnimationRectangleAnime()
 
 }
 
+bool RectangleAnimation::estpointinterieur(int x, int y) const
+{
+    return (x >= PointdebutRectangleAnime.x && x <= PointfinRectangleAnime.x && y >= PointdebutRectangleAnime.y && y <= PointfinRectangleAnime.y) || (x <= PointdebutRectangleAnime.x && x >= PointfinRectangleAnime.x && y <= PointdebutRectangleAnime.y && y >= PointfinRectangleAnime.y) || (x >= PointdebutRectangleAnime.x && x <= PointfinRectangleAnime.x && y <= PointdebutRectangleAnime.y && y >= PointfinRectangleAnime.y) || (x <= PointdebutRectangleAnime.x && x >= PointfinRectangleAnime.x && y >= PointdebutRectangleAnime.y && y <= PointfinRectangleAnime.y);
+
+}
+

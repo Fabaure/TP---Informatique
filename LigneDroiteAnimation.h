@@ -22,5 +22,7 @@ public:
     int GetDecalageXTraitAnime();
     int GetDecalageYTraitAnime();
     void AnimationTraitAnime();
+    bool estpointinterieur(int x, int y) const override;
+
 };
 

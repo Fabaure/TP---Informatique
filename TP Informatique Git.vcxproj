@@ -121,6 +121,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CercleRajoute.h" />
     <ClInclude Include="Circle.h" />
     <ClInclude Include="CircleAnimation.h" />
     <ClInclude Include="Dessins.h" />
@@ -133,6 +134,7 @@
     <ClInclude Include="TriangleAnimation.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CercleRajoute.cpp" />
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="CircleAnimation.cpp" />
     <ClCompile Include="Dessins.cpp" />

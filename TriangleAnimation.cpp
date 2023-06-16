@@ -73,3 +73,12 @@ void TriangleAnimation::AnimationTriangleAnime()
 	if (PointsTriangleAnimation[0].y <= 0 || PointsTriangleAnimation[1].y >= 800)
 		DecalageYTriangleAnimation = -DecalageYTriangleAnimation;
 }
+
+bool TriangleAnimation::estpointinterieur(int x, int y) const
+{
+	int minX = std::min(std::min(PointsTriangleAnimation[0].x, PointsTriangleAnimation[1].x), PointsTriangleAnimation[2].x);
+	int minY = std::min(std::min(PointsTriangleAnimation[0].y, PointsTriangleAnimation[1].y), PointsTriangleAnimation[2].y);
+	int maxX = std::max(std::max(PointsTriangleAnimation[0].x, PointsTriangleAnimation[1].x), PointsTriangleAnimation[2].x);
+	int maxY = std::max(std::max(PointsTriangleAnimation[0].y, PointsTriangleAnimation[1].y), PointsTriangleAnimation[2].y);
+	return (x >= minX && x <= maxX && y >= minY && y <= maxY);
+}

@@ -22,5 +22,6 @@ public:
     int GetDecalageXRectangleAnime();
     int GetDecalageYRectangleAnime();
     void AnimationRectangleAnime();
+    bool estpointinterieur(int x, int y) const override;
 };
 

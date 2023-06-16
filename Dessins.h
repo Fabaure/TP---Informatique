@@ -34,7 +34,11 @@ public:
     void afficher();
     static void CallBackFunc(int event, int x, int y, int flags, void* userdata);
     void CreationFichier();
-    void SauvegarderModification(const std::string& NomFichierTexte, const cv::Mat& image, Forme* forme);
+    void SauvegarderModificationCreation(const std::string& NomFichierTexte, const Mat& image, Forme* forme);
+    static void SauvegarderModificationSupprimer(const std::string& NomFichierTexte, const Mat& image, Forme* forme);
+    string GetNomFichierTexte();
+    Mat GetImage();
+
     void sauvegarderDessin(const string& fichier);
     void lireDessin(const string& fichier);
     Mat getMatrice() const;

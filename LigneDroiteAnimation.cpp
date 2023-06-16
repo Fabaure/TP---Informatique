@@ -63,3 +63,10 @@ void LigneDroiteAnimation::AnimationTraitAnime()
     if (PointdebutTraitAnimation.y <= 0 || PointfinTraitAnimation.y >= 800)
         DecalageYTraitAnimation = -DecalageYTraitAnimation;
 }
+
+bool LigneDroiteAnimation::estpointinterieur(int x, int y) const
+{
+    return (x >= PointdebutTraitAnimation.x && x <= PointfinTraitAnimation.x && y >= PointdebutTraitAnimation.y && y <= PointfinTraitAnimation.y) || (x <= PointdebutTraitAnimation.x && x >= PointfinTraitAnimation.x && y <= PointdebutTraitAnimation.y && y >= PointfinTraitAnimation.y) || (x >= PointdebutTraitAnimation.x && x <= PointfinTraitAnimation.x && y <= PointdebutTraitAnimation.y && y >= PointfinTraitAnimation.y) || (x <= PointdebutTraitAnimation.x && x >= PointfinTraitAnimation.x && y >= PointdebutTraitAnimation.y && y <= PointfinTraitAnimation.y);
+
+}
+

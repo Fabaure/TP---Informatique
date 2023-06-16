@@ -45,17 +45,6 @@ void LigneDroite::dessiner(Mat& image) {
 
 bool LigneDroite::estpointinterieur(int x, int y) const {
     // Vérification si le point est sur la ligne droite
-    int dx = PointfinTrait.x - PointdebutTrait.x;
-    int dy = PointfinTrait.y - PointdebutTrait.y;
-    int dpx = x - PointdebutTrait.x;
-    int dpy = y - PointdebutTrait.y;
+    return (x >= PointdebutTrait.x && x <= PointfinTrait.x && y >= PointdebutTrait.y && y <= PointfinTrait.y) || (x <= PointdebutTrait.x && x >= PointfinTrait.x && y <= PointdebutTrait.y && y >= PointfinTrait.y) || (x >= PointdebutTrait.x && x <= PointfinTrait.x && y <= PointdebutTrait.y && y >= PointfinTrait.y) || (x <= PointdebutTrait.x && x >= PointfinTrait.x && y >= PointdebutTrait.y && y <= PointfinTrait.y);
 
-    int dot = dx * dpx + dy * dpy;
-
-    // Calcul de la longueur au carré de la ligne droite
-    int lengthSquare = dx * dx + dy * dy;
-
-    // Vérification si le point est à proximité de la ligne droite
-    // en utilisant le produit scalaire et la longueur de la ligne droite
-    return dot >= 0 && dot <= lengthSquare;
 }

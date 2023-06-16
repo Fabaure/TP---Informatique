@@ -24,6 +24,5 @@ public:
 	int GetDecalageYCercleAnime();
 	void AnimationCercleAnime();
 	bool estpointinterieur(int x, int y) const override;
-	bool estCercleAnime(int x, int y) const;
 };
 

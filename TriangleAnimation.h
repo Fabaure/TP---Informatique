@@ -21,5 +21,7 @@ public:
     int GetDecalageYTriangleAnimation();
     void dessiner(Mat& image) override;
     void AnimationTriangleAnime();
+    bool estpointinterieur(int x, int y) const override;
+
 };
 
