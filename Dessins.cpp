@@ -209,7 +209,7 @@ void Dessins::SauvegarderModificationSupprimer(const std::string& NomFichierText
     }
 
     if (auto triangle = dynamic_cast<Triangle*>(forme)) {
-        file << "Triangle supprimé" << "(";
+        file << "Triangle supprime" << "(";
         file << "Point1: (" << triangle->GetPointTriangle1().x << ", " << triangle->GetPointTriangle1().y << ")" << ", ";
         file << "Point2: (" << triangle->GetPointTriangle2().x << ", " << triangle->GetPointTriangle2().y << ")" << ", ";
         file << "Point3: (" << triangle->GetPointTriangle3().x << ", " << triangle->GetPointTriangle3().y << ")" << ", ";
@@ -219,7 +219,7 @@ void Dessins::SauvegarderModificationSupprimer(const std::string& NomFichierText
     }
 
     if (auto rectangle = dynamic_cast<Rectangle*>(forme)) {
-        file << "Rectangle supprimé" << "(";
+        file << "Rectangle supprime" << "(";
         file << "Point de début: (" << rectangle->GetPointdebutRectangle().x << ", " << rectangle->GetPointdebutRectangle().y << ")" << ", ";
         file << "Point de fin: (" << rectangle->GetPointfinRectangle().x << ", " << rectangle->GetPointfinRectangle().y << ")" << ", ";
         file << "Couleur : (" << rectangle->GetCouleurRectangle().val[0] << "," << rectangle->GetCouleurRectangle().val[1] << "," << rectangle->GetCouleurRectangle().val[2] << ")" << ", ";
@@ -228,7 +228,7 @@ void Dessins::SauvegarderModificationSupprimer(const std::string& NomFichierText
     }
 
     if (auto cercle = dynamic_cast<Circle*>(forme)) {
-        file << "Cercle supprimé" << "(";
+        file << "Cercle supprime" << "(";
         file << "Centre: (" << cercle->GetCentreCercle().x << ", " << cercle->GetCentreCercle().y << ")" << ", ";
         file << "Rayon: " << cercle->GetRayonCercle() << ", ";
         file << "Couleur : (" << cercle->GetCouleurCercle().val[0] << "," << cercle->GetCouleurCercle().val[1] << "," << cercle->GetCouleurCercle().val[2] << ")" << ", ";
@@ -236,7 +236,7 @@ void Dessins::SauvegarderModificationSupprimer(const std::string& NomFichierText
     }
 
     if (auto lignedroite = dynamic_cast<LigneDroite*>(forme)) {
-        file << "Ligne droite supprimé" << "(";
+        file << "Ligne droite supprime" << "(";
         file << "Point de début: (" << lignedroite->GetPointdebutTrait().x << ", " << lignedroite->GetPointdebutTrait().y << ")" << ", ";
         file << "Point de fin: (" << lignedroite->GetPointfinTrait().x << ", " << lignedroite->GetPointfinTrait().y << ")" << ", ";
         file << "Couleur : (" << lignedroite->GetCouleurTrait().val[0] << "," << lignedroite->GetCouleurTrait().val[1] << "," << lignedroite->GetCouleurTrait().val[2] << ")" << ", ";
@@ -244,7 +244,7 @@ void Dessins::SauvegarderModificationSupprimer(const std::string& NomFichierText
     }
 
     if (auto triangleanime = dynamic_cast<TriangleAnimation*>(forme)) {
-        file << "Triangle animé supprimé" << "(";
+        file << "Triangle animé supprime" << "(";
         file << "Point1: (" << triangleanime->GetPointTriangleAnimation1().x << ", " << triangleanime->GetPointTriangleAnimation1().y << ")" << ", ";
         file << "Point2: (" << triangleanime->GetPointTriangleAnimation2().x << ", " << triangleanime->GetPointTriangleAnimation2().y << ")" << ", ";
         file << "Point3: (" << triangleanime->GetPointTriangleAnimation3().x << ", " << triangleanime->GetPointTriangleAnimation3().y << ")" << ", ";
@@ -255,7 +255,7 @@ void Dessins::SauvegarderModificationSupprimer(const std::string& NomFichierText
     }
 
     if (auto rectangleanime = dynamic_cast<RectangleAnimation*>(forme)) {
-        file << "Rectangle animé supprimé" << "(";
+        file << "Rectangle animé supprime" << "(";
         file << "Point de début: (" << rectangleanime->GetPointdebutRectangleAnime().x << ", " << rectangleanime->GetPointdebutRectangleAnime().y << ")" << ", ";
         file << "Point de fin: (" << rectangleanime->GetPointfinRectangleAnime().x << ", " << rectangleanime->GetPointfinRectangleAnime().y << ")" << ", ";
         file << "Couleur : (" << rectangleanime->GetCouleurRectangleAnime().val[0] << "," << rectangleanime->GetCouleurRectangleAnime().val[1] << "," << rectangleanime->GetCouleurRectangleAnime().val[2] << ")" << ", ";
@@ -265,7 +265,7 @@ void Dessins::SauvegarderModificationSupprimer(const std::string& NomFichierText
     }
 
     if (auto cercleanime = dynamic_cast<CircleAnimation*>(forme)) {
-        file << "Cercle animé supprimé" << "(";
+        file << "Cercle animé supprime" << "(";
         file << "Centre: (" << cercleanime->GetCentreCercleAnime().x << ", " << cercleanime->GetCentreCercleAnime().y << ")" << ", ";
         file << "Rayon: " << cercleanime->GetRayonCercleAnime() << ", ";
         file << "Couleur : (" << cercleanime->GetCouleurCercleAnime().val[0] << "," << cercleanime->GetCouleurCercleAnime().val[1] << "," << cercleanime->GetCouleurCercleAnime().val[2] << ")" << ", ";
@@ -275,7 +275,7 @@ void Dessins::SauvegarderModificationSupprimer(const std::string& NomFichierText
     }
 
     if (auto lignedroiteanime = dynamic_cast<LigneDroiteAnimation*>(forme)) {
-        file << "Ligne droite animée supprimé" << "(";
+        file << "Ligne droite animée supprime" << "(";
         file << "Point de début: (" << lignedroiteanime->GetPointdebutTraitAnime().x << ", " << lignedroiteanime->GetPointdebutTraitAnime().y << ")" << ", ";
         file << "Point de fin: (" << lignedroiteanime->GetPointfinTraitAnime().x << ", " << lignedroiteanime->GetPointfinTraitAnime().y << ")" << ", ";
         file << "Couleur : (" << lignedroiteanime->GetCouleurTraitAnime().val[0] << "," << lignedroiteanime->GetCouleurTraitAnime().val[1] << "," << lignedroiteanime->GetCouleurTraitAnime().val[2] << ")" << ", ";
@@ -285,7 +285,7 @@ void Dessins::SauvegarderModificationSupprimer(const std::string& NomFichierText
     }
 
     if (auto cerclerajoute = dynamic_cast<CercleRajoute*>(forme)) {
-        file << "Un Cercle qui avait été rajouté à été supprimé" << "(";
+        file << "Un Cercle qui avait ete rajoute a ete supprime" << "(";
         file << "Centre: (" << cerclerajoute->GetCentreCercleRajoute().x << ", " << cerclerajoute->GetCentreCercleRajoute().y << ")" << ", ";
         file << "Rayon: " << cerclerajoute->GetRayonCercleRajoute() << ", ";
         file << "Couleur : (" << cerclerajoute->GetCouleurCercleRajoute().val[0] << "," << cerclerajoute->GetCouleurCercleRajoute().val[1] << "," << cerclerajoute->GetCouleurCercleRajoute().val[2] << ")" << ", ";
