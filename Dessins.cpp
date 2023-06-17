@@ -59,7 +59,7 @@ void Dessins::afficher() {
 
 void Dessins::CallBackFunc(int event, int x, int y, int flags, void* userdata)
 {
-    srand(std::time(NULL));
+    srand(std::time(0));
     int Red = rand() % 256;
     int Blue = rand() % 256;
     int Green = rand() % 256;

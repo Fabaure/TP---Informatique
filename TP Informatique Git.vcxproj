@@ -71,7 +71,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>C:\Users\33783\Desktop\C\opencv\build\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\33738\Desktop\C\opencv\build\x64\vc16\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Users\33783\Desktop\C\opencv\build\x64\vc16\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

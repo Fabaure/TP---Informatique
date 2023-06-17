@@ -20,3 +20,16 @@ se deplaçant a une vitesse de : 4pixels sur l'axe X, et 2pixels sur l'axe Y.
 Triangle animé(Point1: (80, 80), Point2: (100, 120), Point3: (120, 80), Couleur : (0,0,0), Epaisseur : 4)
 se deplaçant a une vitesse de : 4pixels sur l'axe X, et -2pixels sur l'axe Y.
 
+Rectangle animé supprime(Point de début: (256, 92), Point de fin: (156, 356), Couleur : (145,100,30), Epaisseur : -1)
+se deplaçant a une vitesse de : -2pixels sur l'axe X, et -2pixels sur l'axe Y.
+
+Cercle supprime(Centre: (150, 150), Rayon: 40, Couleur : (255,255,0), Epaisseur : -1)
+
+Triangle supprime(Point1: (80, 80), Point2: (100, 120), Point3: (120, 100), Couleur : (0,0,255), Epaisseur : 8)
+
+Cercle supprime(Centre: (80, 80), Rayon: 40, Couleur : (255,0,0), Epaisseur : -1)
+
+Un Cercle à été ajouté(Centre: (499, 115), Rayon: 25, Couleur : (247,216,72), Epaisseur : -1)
+
+Un Cercle à été ajouté(Centre: (453, 71), Rayon: 25, Couleur : (250,160,69), Epaisseur : -1)
+
