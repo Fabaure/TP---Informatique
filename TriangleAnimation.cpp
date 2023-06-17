@@ -20,37 +20,37 @@ TriangleAnimation::TriangleAnimation(Point PointsTriangleAnimation1_, Point Poin
 	DecalageYTriangleAnimation = DecalageYtriangleAnimation_;
 
 }
-
+// 1er point
 Point TriangleAnimation::GetPointTriangleAnimation1()
 {
 	return PointsTriangleAnimation[0];
 }
-
+// 2e point
 Point TriangleAnimation::GetPointTriangleAnimation2()
 {
 	return PointsTriangleAnimation[1];
 }
-
+// 3e point
 Point TriangleAnimation::GetPointTriangleAnimation3()
 {
 	return PointsTriangleAnimation[2];
 }
-
+// 4e point
 Scalar TriangleAnimation::GetCouleurTriangleAnimation()
 {
 	return CouleurTriangleAnimation;
 }
-
+// 5e point
 int TriangleAnimation::GetEpaisseurTriangleAnimation()
 {
 	return EpaisseurTriangleAnimation;
 }
-
+// Decalage Horizontal
 int TriangleAnimation::GetDecalageXTriangleAnimation()
 {
 	return DecalageXTriangleAnimation;
 }
-
+// Decalage Vertical
 int TriangleAnimation::GetDecalageYTriangleAnimation()
 {
 	return DecalageYTriangleAnimation;
@@ -58,11 +58,12 @@ int TriangleAnimation::GetDecalageYTriangleAnimation()
 
 void TriangleAnimation::dessiner(Mat& image)
 {
-	const cv::Point* contours[1] = { PointsTriangleAnimation };
+	const Point* contours[1] = { PointsTriangleAnimation };
 	int numPoints[] = { 3 };
-	cv::polylines(image, contours, numPoints, 1, true, CouleurTriangleAnimation, EpaisseurTriangleAnimation);
+	polylines(image, contours, numPoints, 1, true, CouleurTriangleAnimation, EpaisseurTriangleAnimation);
 }
 
+// Anime le triangle en le deplaçant selon les décalages spécifies
 void TriangleAnimation::AnimationTriangleAnime()
 {
 	PointsTriangleAnimation[0] += Point(DecalageXTriangleAnimation, DecalageYTriangleAnimation);
@@ -74,11 +75,12 @@ void TriangleAnimation::AnimationTriangleAnime()
 		DecalageYTriangleAnimation = -DecalageYTriangleAnimation;
 }
 
+// Vérifie si un point (x, y) est à l'intérieur du triangle animé
 bool TriangleAnimation::estpointinterieur(int x, int y) const
 {
-	int minX = std::min(std::min(PointsTriangleAnimation[0].x, PointsTriangleAnimation[1].x), PointsTriangleAnimation[2].x);
-	int minY = std::min(std::min(PointsTriangleAnimation[0].y, PointsTriangleAnimation[1].y), PointsTriangleAnimation[2].y);
-	int maxX = std::max(std::max(PointsTriangleAnimation[0].x, PointsTriangleAnimation[1].x), PointsTriangleAnimation[2].x);
-	int maxY = std::max(std::max(PointsTriangleAnimation[0].y, PointsTriangleAnimation[1].y), PointsTriangleAnimation[2].y);
+	int minX = min(min(PointsTriangleAnimation[0].x, PointsTriangleAnimation[1].x), PointsTriangleAnimation[2].x);
+	int minY = min(min(PointsTriangleAnimation[0].y, PointsTriangleAnimation[1].y), PointsTriangleAnimation[2].y);
+	int maxX = max(max(PointsTriangleAnimation[0].x, PointsTriangleAnimation[1].x), PointsTriangleAnimation[2].x);
+	int maxY = max(max(PointsTriangleAnimation[0].y, PointsTriangleAnimation[1].y), PointsTriangleAnimation[2].y);
 	return (x >= minX && x <= maxX && y >= minY && y <= maxY);
 }

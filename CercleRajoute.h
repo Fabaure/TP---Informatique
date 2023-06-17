@@ -3,16 +3,21 @@
 class CercleRajoute : public Forme
 {
 private:
-	Point CentreCercleRajoute;
-	int RayonCercleRajoute;
-	Scalar CouleurCercleRajoute;
-	int EpaisseurCercleRajoute;
+	Point CentreCercleRajoute; // Centre du cercle
+	int RayonCercleRajoute; // Rayon du cercle
+	Scalar CouleurCercleRajoute; // Couleur du cercle 
+	int EpaisseurCercleRajoute; // Epaisseur du trait du cercle
 
 public:
-	CercleRajoute();
-	CercleRajoute(Point CentreCercleRajoute_, int RayonCercleRajoute_, Scalar CouleurCercleRajoute_, int EpaisseurCercleRajoute_);
+	CercleRajoute(); // Constructeur
+	CercleRajoute(Point CentreCercleRajoute_, int RayonCercleRajoute_, Scalar CouleurCercleRajoute_, int EpaisseurCercleRajoute_); // Avec paramètres
+	
+	// Methode pour dessiner le cercle sur une image
 	void dessiner(Mat& image) override;
-	bool estpointinterieur(int x, int y) const override;
+	
+	// Methode pour verifier si le curseur est à l'interieur du cercle
+	bool estpointinterieur(int x, int y) const override; 
+	
 	Point GetCentreCercleRajoute();
 	int GetRayonCercleRajoute();
 	Scalar GetCouleurCercleRajoute();

@@ -9,10 +9,9 @@ using namespace cv;
 
 class Triangle : public Forme {
 private:
-    cv::Point PointsTriangle[3];
-    Scalar CouleurTriangle;
-    int EpaisseurTriangle;
-
+    Point PointsTriangle[3];   // Tableau de 3 points representant les sommets du triangle
+    Scalar CouleurTriangle;    // Couleur du triangle (type de donnees OpenCV)
+    int EpaisseurTriangle;     // Epaisseur du trait du triangle
 
 public:
     Triangle();
@@ -22,7 +21,11 @@ public:
     Point GetPointTriangle3();
     Scalar GetCouleurTriangle();
     int GetEpaisseurTriangle();
+    
+    // Methode pour dessiner le triangle sur une image
     void dessiner(Mat& image) override;
+
+    // Methode pour verifier si un point est a l'interieur du triangle
     bool estpointinterieur(int x, int y) const override;
 };
 

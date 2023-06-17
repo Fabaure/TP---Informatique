@@ -33,6 +33,7 @@ Dessins::Dessins(int width_, int height_, Scalar CouleurMatrice_, string NomFich
 }
 
 void Dessins::ajouterForme(Forme* forme) {
+    // Ajoute une forme à la liste de formes
     formes.push_back(forme);
     SauvegarderModificationCreation( NomFichierTexte , image, forme);
     
@@ -40,6 +41,7 @@ void Dessins::ajouterForme(Forme* forme) {
 
 
 void Dessins::dessinerFormes() {
+    // Dessine toutes les formes dans l'image
     for (Forme* forme : formes) {
         forme->dessiner(image);
     }
@@ -47,36 +49,35 @@ void Dessins::dessinerFormes() {
 
 void Dessins::createWindow()
 {
+    // Crée une fenêtre pour afficher l'image
     namedWindow("Tableau", 1);
 }
 
-void Dessins::afficher() {
-    //namedWindow("Tableau", cv::WINDOW_AUTOSIZE);
+void Dessins::afficher() 
+{
+     // Affiche l'image dans la fenêtre
     imshow("Tableau", image);
-    //waitKey(0);
-    //destroyWindow("Tableau");
 }
 
 void Dessins::CallBackFunc(int event, int x, int y, int flags, void* userdata)
 {
-    srand(std::time(NULL));
+    srand(std::time(0));
     int Red = rand() % 256;
     int Blue = rand() % 256;
     int Green = rand() % 256;
+
+    // Obtention de l'objet Matrice à partir de userdata
     Dessins* Matrice = static_cast<Dessins*>(userdata);
-    if (event == EVENT_LBUTTONDOWN)
+   
+    if (event == EVENT_LBUTTONDOWN) // Si le bouton gauche de la souris est enfoncé
     {
-        
-        // Obtention de l'objet Matrice à partir de userdata
-        Dessins* Matrice = static_cast<Dessins*>(userdata);
-
+        // Ajout d'un cercle au niveau du curseur et d'une couleur aléatoire
         CercleRajoute* ObjetPredetermine = new CercleRajoute(Point(x, y), 25, Scalar(Red, Green, Blue), -1);
-
 
         // Ajout de l'objet Circle à la Matrice
         Matrice->ajouterForme(ObjetPredetermine);
     }
-    else if (event == EVENT_RBUTTONDOWN)
+    else if (event == EVENT_RBUTTONDOWN) // Si le bouton droit de la souris est enfoncé
     {
         auto it = Matrice->formes.begin();
         while (it != Matrice->formes.end())
@@ -87,7 +88,6 @@ void Dessins::CallBackFunc(int event, int x, int y, int flags, void* userdata)
             {
                 
                 // Suppression de la forme si le bouton droit de la souris est enfoncé et le clic est effectué à l'intérieur de la forme
-                
                 it = Matrice->formes.erase(it);
                 Matrice->SauvegarderModificationSupprimer(Matrice->GetNomFichierTexte(), Matrice->GetImage(), Objet);
                     
@@ -102,14 +102,16 @@ void Dessins::CallBackFunc(int event, int x, int y, int flags, void* userdata)
 
 void Dessins::CreationFichier()
 {
-    std::ofstream file(NomFichierTexte);
+    // Crée un fichier vide avec le nom spécifié
+    ofstream file(NomFichierTexte);
 }
 
-void Dessins::SauvegarderModificationCreation(const std::string& NomFichierTexte, const Mat& image, Forme* forme)
+void Dessins::SauvegarderModificationCreation(const string& NomFichierTexte, const Mat& image, Forme* forme)
 {
-    std::ofstream file(NomFichierTexte, std::ios::app);
+    // Sauvegarde la modification de création de forme dans le fichier texte
+    ofstream file(NomFichierTexte, ios::app);
     if (!file.is_open()) {
-        std::cerr << "Erreur lors de l'ouverture du fichier : " << NomFichierTexte << std::endl;
+        cerr << "Erreur lors de l'ouverture du fichier : " << NomFichierTexte << endl;
         return;
     }
     
@@ -200,11 +202,12 @@ void Dessins::SauvegarderModificationCreation(const std::string& NomFichierTexte
     file.close();
 }
 
-void Dessins::SauvegarderModificationSupprimer(const std::string& NomFichierTexte, const Mat& image, Forme* forme)
+void Dessins::SauvegarderModificationSupprimer(const string& NomFichierTexte, const Mat& image, Forme* forme)
 {
-    std::ofstream file(NomFichierTexte, std::ios::app);
+    // Sauvegarde la modification de suppression de forme dans le fichier texte
+    ofstream file(NomFichierTexte, ios::app);
     if (!file.is_open()) {
-        std::cerr << "Erreur lors de l'ouverture du fichier : " << NomFichierTexte << std::endl;
+        cerr << "Erreur lors de l'ouverture du fichier : " << NomFichierTexte << endl;
         return;
     }
 
@@ -297,20 +300,22 @@ void Dessins::SauvegarderModificationSupprimer(const std::string& NomFichierText
 
 string Dessins::GetNomFichierTexte()
 {
+    // Retourne le fichier txt
     return NomFichierTexte;
 }
 
 Mat Dessins::GetImage()
 {
+    // Retourne l'image
     return image;
 }
 
 
-void Dessins::sauvegarderDessin(const std::string& fichier) {
+void Dessins::sauvegarderDessin(const string& fichier) {
     imwrite(fichier, image);
 }
 
-void Dessins::lireDessin(const std::string& fichier) {
+void Dessins::lireDessin(const string& fichier) {
     image = imread(fichier);
 }
 

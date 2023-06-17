@@ -25,36 +25,42 @@ void CircleAnimation::dessiner(Mat& image)
 	circle(image, CentreCercleAnimation, RayonCercleAnimation, CouleurCercleAnimation, EpaisseurCercleAnimation);
 }
 
+// Centre
 Point CircleAnimation::GetCentreCercleAnime()
 {
 	return CentreCercleAnimation;
 }
 
+// Rayon
 int CircleAnimation::GetRayonCercleAnime()
 {
 	return RayonCercleAnimation;
 }
 
+// Couleur
 Scalar CircleAnimation::GetCouleurCercleAnime()
 {
 	return CouleurCercleAnimation;
 }
 
+// Epaisseur
 int CircleAnimation::GetEpaisseurCercleAnime()
 {
 	return EpaisseurCercleAnimation;
 }
 
+// Decalage Horizontal
 int CircleAnimation::GetDecalageXCercleAnime()
 {
 	return DecalageXCercleAnimation;
 }
-
+// Decalage Vertical
 int CircleAnimation::GetDecalageYCercleAnime()
 {
 	return DecalageYCercleAnimation;
 }
 
+// Anime le cercle en le deplaçant selon les décalages spécifies
 void CircleAnimation::AnimationCercleAnime()
 {
 
@@ -66,6 +72,7 @@ void CircleAnimation::AnimationCercleAnime()
 		DecalageYCercleAnimation = -DecalageYCercleAnimation;
 }
 
+// Vérifie si un point (x, y) est à l'intérieur du cercle animé
 bool CircleAnimation::estpointinterieur(int x, int y) const
 {
 	// Utilise la fonction estPointInterieur de la classe Circle

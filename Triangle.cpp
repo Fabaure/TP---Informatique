@@ -24,41 +24,42 @@ Triangle::Triangle(Point PointTriangle1_, Point PointTriangle2_, Point PointTria
     EpaisseurTriangle = EpaisseurTriangle_;
 
 }
-
+// 1er point
 Point Triangle::GetPointTriangle1()
 {
     return PointsTriangle[0];
 }
-
+// 2e point
 Point Triangle::GetPointTriangle2()
 {
     return PointsTriangle[1];
 }
-
+// 3e point
 Point Triangle::GetPointTriangle3()
 {
     return PointsTriangle[2];
 }
-
+// 4e point
 Scalar Triangle::GetCouleurTriangle()
 {
     return CouleurTriangle;
 }
-
+// 5e point
 int Triangle::GetEpaisseurTriangle()
 {
     return EpaisseurTriangle;
 }
 
+// Verifie si un point (x, y) est à l'intérieur du triangle
 bool Triangle::estpointinterieur(int x, int y) const {
     
 
     // Vérification si le point est à l'intérieur du triangle en utilisant les coordonnées barycentriques
         
 
-    int minX = std::min(std::min(PointsTriangle[0].x, PointsTriangle[1].x), PointsTriangle[2].x);
-    int minY = std::min(std::min(PointsTriangle[0].y, PointsTriangle[1].y), PointsTriangle[2].y);
-    int maxX = std::max(std::max(PointsTriangle[0].x, PointsTriangle[1].x), PointsTriangle[2].x);
-    int maxY = std::max(std::max(PointsTriangle[0].y, PointsTriangle[1].y), PointsTriangle[2].y);
+    int minX = min(min(PointsTriangle[0].x, PointsTriangle[1].x), PointsTriangle[2].x);
+    int minY = min(min(PointsTriangle[0].y, PointsTriangle[1].y), PointsTriangle[2].y);
+    int maxX = max(max(PointsTriangle[0].x, PointsTriangle[1].x), PointsTriangle[2].x);
+    int maxY = max(max(PointsTriangle[0].y, PointsTriangle[1].y), PointsTriangle[2].y);
     return (x >= minX && x <= maxX && y >= minY && y <= maxY);
 }

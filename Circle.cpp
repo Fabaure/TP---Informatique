@@ -16,28 +16,31 @@ Circle::Circle(Point CentreCercle_, int RayonCercle_, Scalar CouleurCercle_, int
 	EpaisseurCercle = EpaisseurCercle_;
 }
 
+// Centre
 Point Circle::GetCentreCercle()
 {
 	return CentreCercle;
 }
-
+// Rayon
 int Circle::GetRayonCercle()
 {
 	return RayonCercle;
 }
-
+// Couleur
 Scalar Circle::GetCouleurCercle()
 {
 	return CouleurCercle;
 }
-
+// Epaisseur
 int Circle::GetEpaisseurCercle()
 {
 	return EpaisseurCercle;
 }
+
+// Verifie si un point (x, y) est à l'intérieur du cercle
 bool Circle::estpointinterieur(int x, int y) const {
 	// Calcul de la distance entre le point (x, y) et le centre du cercle
-	double distance = std::sqrt(std::pow(x - CentreCercle.x, 2) + std::pow(y - CentreCercle.y, 2));
+	double distance = sqrt(pow(x - CentreCercle.x, 2) + pow(y - CentreCercle.y, 2));
 
 	// Vérification si la distance est inférieure ou égale au rayon du cercle
 	return distance <= RayonCercle;

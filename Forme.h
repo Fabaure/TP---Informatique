@@ -9,9 +9,10 @@ using namespace cv;
 class Forme {
 public:
 
-    virtual void dessiner(Mat& image) = 0;
-    virtual bool estpointinterieur(int x, int y) const = 0;
-    virtual ~Forme() {}
+    virtual void dessiner(Mat& image) = 0;                   // Methode virtuelle pure pour dessiner la forme sur une image
+    virtual bool estpointinterieur(int x, int y) const = 0;  // Méthode virtuelle pure pour vérifier si un point est à l'intérieur de la forme
+    virtual ~Forme() {}                                      // Destructeur virtuel
+
 };
 
 #endif

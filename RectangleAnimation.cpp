@@ -26,37 +26,38 @@ void RectangleAnimation::dessiner(Mat& image)
 {
         rectangle(image, PointdebutRectangleAnime, PointfinRectangleAnime, CouleurRectangleAnime, EpaisseurRectangleAnime);  
 }
-
+// Point début
 Point RectangleAnimation::GetPointdebutRectangleAnime()
 {
     return PointdebutRectangleAnime;
 }
-
+// Point d'arrivé
 Point RectangleAnimation::GetPointfinRectangleAnime()
 {
     return PointfinRectangleAnime;
 }
-
+// Couleur
 Scalar RectangleAnimation::GetCouleurRectangleAnime()
 {
     return CouleurRectangleAnime;
 }
-
+// Epaisseur
 int RectangleAnimation::GetEpaisseurRectangleAnime()
 {
     return EpaisseurRectangleAnime;
 }
-
+// Décalage Horizontal
 int RectangleAnimation::GetDecalageXRectangleAnime()
 {
     return DecalageXRectangleAnime;
 }
-
+// Décalage Vertical
 int RectangleAnimation::GetDecalageYRectangleAnime()
 {
     return DecalageYRectangleAnime;
 }
 
+// Anime le rectangle en le deplaçant selon les décalages spécifies
 void RectangleAnimation::AnimationRectangleAnime()
 {
     PointdebutRectangleAnime += Point(DecalageXRectangleAnime,DecalageYRectangleAnime);
@@ -68,6 +69,7 @@ void RectangleAnimation::AnimationRectangleAnime()
 
 }
 
+// Vérifie si un point (x, y) est à l'intérieur du rectangle animé
 bool RectangleAnimation::estpointinterieur(int x, int y) const
 {
     return (x >= PointdebutRectangleAnime.x && x <= PointfinRectangleAnime.x && y >= PointdebutRectangleAnime.y && y <= PointfinRectangleAnime.y) || (x <= PointdebutRectangleAnime.x && x >= PointfinRectangleAnime.x && y <= PointdebutRectangleAnime.y && y >= PointfinRectangleAnime.y) || (x >= PointdebutRectangleAnime.x && x <= PointfinRectangleAnime.x && y <= PointdebutRectangleAnime.y && y >= PointfinRectangleAnime.y) || (x <= PointdebutRectangleAnime.x && x >= PointfinRectangleAnime.x && y >= PointdebutRectangleAnime.y && y <= PointfinRectangleAnime.y);

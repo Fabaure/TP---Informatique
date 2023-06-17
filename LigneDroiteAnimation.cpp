@@ -23,37 +23,38 @@ void LigneDroiteAnimation::dessiner(Mat& image)
 {
     line(image, PointdebutTraitAnimation, PointfinTraitAnimation, CouleurTraitAnimation, EpaisseurTraitAnimation);
 }
-
+// Point de depart
 Point LigneDroiteAnimation::GetPointdebutTraitAnime()
 {
     return PointdebutTraitAnimation;
 }
-
+// Point d'arrive
 Point LigneDroiteAnimation::GetPointfinTraitAnime()
 {
     return PointfinTraitAnimation;
 }
-
+// Couleur
 Scalar LigneDroiteAnimation::GetCouleurTraitAnime()
 {
     return CouleurTraitAnimation;
 }
-
+// Epaisseur
 int LigneDroiteAnimation::GetEpaisseurTraitAnime()
 {
     return EpaisseurTraitAnimation;
 }
-
+// Decalage Horizontal
 int LigneDroiteAnimation::GetDecalageXTraitAnime()
 {
     return DecalageXTraitAnimation;
 }
-
+// Decalage Vertical
 int LigneDroiteAnimation::GetDecalageYTraitAnime()
 {
     return DecalageYTraitAnimation;
 }
 
+// Anime le trait en le deplaçant selon les décalages spécifies
 void LigneDroiteAnimation::AnimationTraitAnime()
 {
     PointdebutTraitAnimation += Point(DecalageXTraitAnimation, DecalageYTraitAnimation);
@@ -64,6 +65,7 @@ void LigneDroiteAnimation::AnimationTraitAnime()
         DecalageYTraitAnimation = -DecalageYTraitAnimation;
 }
 
+// Vérifie si un point (x, y) est à l'intérieur du trait animé
 bool LigneDroiteAnimation::estpointinterieur(int x, int y) const
 {
     return (x >= PointdebutTraitAnimation.x && x <= PointfinTraitAnimation.x && y >= PointdebutTraitAnimation.y && y <= PointfinTraitAnimation.y) || (x <= PointdebutTraitAnimation.x && x >= PointfinTraitAnimation.x && y <= PointdebutTraitAnimation.y && y >= PointfinTraitAnimation.y) || (x >= PointdebutTraitAnimation.x && x <= PointfinTraitAnimation.x && y <= PointdebutTraitAnimation.y && y >= PointfinTraitAnimation.y) || (x <= PointdebutTraitAnimation.x && x >= PointfinTraitAnimation.x && y >= PointdebutTraitAnimation.y && y <= PointfinTraitAnimation.y);
