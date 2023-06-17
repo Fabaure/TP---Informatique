@@ -1,48 +1,57 @@
-Cercle(Centre: (80, 80), Rayon: 40, Couleur : (255,0,0), Epaisseur : -1)
+Un Cercle à été ajouté(Centre: (1172, 205), Rayon: 25, Couleur : (189,69,123), Epaisseur : -1)
 
-Cercle(Centre: (150, 150), Rayon: 40, Couleur : (255,255,0), Epaisseur : -1)
+Un Cercle à été ajouté(Centre: (1270, 231), Rayon: 25, Couleur : (195,213,115), Epaisseur : -1)
 
-Rectangle(Point de début: (500, 120), Point de fin: (400, 40), Couleur : (0,255,255), Epaisseur : -1)
+Un Cercle qui avait été rajouté à été supprimé(Centre: (1270, 231), Rayon: 25, Couleur : (195,213,115), Epaisseur : -1)
 
-Triangle(Point1: (80, 80), Point2: (100, 120), Point3: (120, 100), Couleur : (0,0,255), Epaisseur : 8)
+Un Cercle à été ajouté(Centre: (1195, 219), Rayon: 25, Couleur : (199,157,112), Epaisseur : -1)
 
-Ligne droite(Point de début: (500, 600), Point de fin: (500, 500), Couleur : (255,255,255), Epaisseur : 2)
+Un Cercle qui avait été rajouté à été supprimé(Centre: (1195, 219), Rayon: 25, Couleur : (199,157,112), Epaisseur : -1)
 
-Cercle animé(Centre: (750, 700), Rayon: 20, Couleur : (120,120,120), Epaisseur : -1)
-se deplaçant a une vitesse de : 1pixels sur l'axe X, et 1pixels sur l'axe Y.
+Un Cercle qui avait été rajouté à été supprimé(Centre: (1172, 205), Rayon: 25, Couleur : (189,69,123), Epaisseur : -1)
 
-Rectangle animé(Point de début: (320, 156), Point de fin: (220, 420), Couleur : (145,100,30), Epaisseur : -1)
-se deplaçant a une vitesse de : -2pixels sur l'axe X, et -2pixels sur l'axe Y.
+Un Cercle à été ajouté(Centre: (1057, 409), Rayon: 25, Couleur : (205,45,105), Epaisseur : -1)
 
-Ligne droite animée(Point de début: (800, 850), Point de fin: (700, 700), Couleur : (54,86,145), Epaisseur : 7)
+Un Cercle à été ajouté(Centre: (1135, 442), Rayon: 25, Couleur : (208,246,101), Epaisseur : -1)
+
+Un Cercle à été ajouté(Centre: (1245, 442), Rayon: 25, Couleur : (212,190,97), Epaisseur : -1)
+
+Un Cercle à été ajouté(Centre: (1329, 559), Rayon: 25, Couleur : (215,134,94), Epaisseur : -1)
+
+Triangle animé supprimé(Point1: (1452, 606), Point2: (1472, 646), Point3: (1492, 606), Couleur : (0,0,0), Epaisseur : 4)
 se deplaçant a une vitesse de : 4pixels sur l'axe X, et 2pixels sur l'axe Y.
 
-Triangle animé(Point1: (80, 80), Point2: (100, 120), Point3: (120, 80), Couleur : (0,0,0), Epaisseur : 4)
-se deplaçant a une vitesse de : 4pixels sur l'axe X, et -2pixels sur l'axe Y.
+Un Cercle à été ajouté(Centre: (1347, 565), Rayon: 25, Couleur : (225,222,83), Epaisseur : -1)
 
-Cercle supprimé(Centre: (150, 150), Rayon: 40, Couleur : (255,255,0), Epaisseur : -1)
+Un Cercle qui avait été rajouté à été supprimé(Centre: (1329, 559), Rayon: 25, Couleur : (215,134,94), Epaisseur : -1)
 
-Rectangle animé supprimé(Point de début: (262, 98), Point de fin: (162, 362), Couleur : (145,100,30), Epaisseur : -1)
-se deplaçant a une vitesse de : -2pixels sur l'axe X, et -2pixels sur l'axe Y.
+Un Cercle qui avait été rajouté à été supprimé(Centre: (1347, 565), Rayon: 25, Couleur : (225,222,83), Epaisseur : -1)
 
-Un Cercle à été ajouté(Centre: (87, 92), Rayon: 25, Couleur : (207,12,73), Epaisseur : -1)
+Un Cercle qui avait été rajouté à été supprimé(Centre: (1245, 442), Rayon: 25, Couleur : (212,190,97), Epaisseur : -1)
 
-Cercle supprimé(Centre: (80, 80), Rayon: 40, Couleur : (255,0,0), Epaisseur : -1)
+Cercle animé supprimé(Centre: (1166, 484), Rayon: 20, Couleur : (120,120,120), Epaisseur : -1)
+se deplaçant a une vitesse de : 1pixels sur l'axe X, et -1pixels sur l'axe Y.
 
-Triangle supprimé(Point1: (80, 80), Point2: (100, 120), Point3: (120, 100), Couleur : (0,0,255), Epaisseur : 8)
+Un Cercle qui avait été rajouté à été supprimé(Centre: (1135, 442), Rayon: 25, Couleur : (208,246,101), Epaisseur : -1)
 
-Un Cercle qui avait été rajouté à été supprimé(Centre: (87, 92), Rayon: 25, Couleur : (207,12,73), Epaisseur : -1)
+Un Cercle à été ajouté(Centre: (1066, 411), Rayon: 25, Couleur : (238,255,69), Epaisseur : -1)
 
-Triangle animé supprimé(Point1: (560, 160), Point2: (580, 200), Point3: (600, 160), Couleur : (0,0,0), Epaisseur : 4)
-se deplaçant a une vitesse de : 4pixels sur l'axe X, et 2pixels sur l'axe Y.
+Un Cercle qui avait été rajouté à été supprimé(Centre: (1057, 409), Rayon: 25, Couleur : (205,45,105), Epaisseur : -1)
 
-Un Cercle à été ajouté(Centre: (485, 119), Rayon: 25, Couleur : (220,45,58), Epaisseur : -1)
+Un Cercle qui avait été rajouté à été supprimé(Centre: (1066, 411), Rayon: 25, Couleur : (238,255,69), Epaisseur : -1)
 
-Un Cercle à été ajouté(Centre: (479, 109), Rayon: 25, Couleur : (223,245,55), Epaisseur : -1)
+Rectangle animé supprimé(Point de début: (624, 284), Point de fin: (524, 548), Couleur : (145,100,30), Epaisseur : -1)
+se deplaçant a une vitesse de : 2pixels sur l'axe X, et -2pixels sur l'axe Y.
+
+Un Cercle à été ajouté(Centre: (502, 543), Rayon: 25, Couleur : (248,88,58), Epaisseur : -1)
+
+Un Cercle qui avait été rajouté à été supprimé(Centre: (502, 543), Rayon: 25, Couleur : (248,88,58), Epaisseur : -1)
+
+Ligne droite supprimé(Point de début: (500, 600), Point de fin: (500, 500), Couleur : (255,255,255), Epaisseur : 2)
 
 Rectangle supprimé(Point de début: (500, 120), Point de fin: (400, 40), Couleur : (0,255,255), Epaisseur : -1)
 
-Un Cercle qui avait été rajouté à été supprimé(Centre: (485, 119), Rayon: 25, Couleur : (220,45,58), Epaisseur : -1)
+Ligne droite animée supprimé(Point de début: (488, 414), Point de fin: (388, 264), Couleur : (54,86,145), Epaisseur : 7)
+se deplaçant a une vitesse de : 4pixels sur l'axe X, et 2pixels sur l'axe Y.
 
-Un Cercle qui avait été rajouté à été supprimé(Centre: (479, 109), Rayon: 25, Couleur : (223,245,55), Epaisseur : -1)
-
+Cercle supprimé(Centre: (150, 150), Rayon: 40, Couleur : (255,255,0), Epaisseur : -1)
